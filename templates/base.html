@@ -1,0 +1,78 @@
+{% load b3b_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<title>B3B Review | {% block title %}{% endblock %}</title>
+	
+	<!-- META -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<!--<meta http-equiv="cache-control" content="no-cache" />-->
+	<meta http-equiv="expires" content="3600" />
+	<meta name="robots" content="index,follow" />
+	<meta name="publisher" content="B3B Review" />
+	<meta name="copyright" content="Copyright 2009 B3B Review" />
+	<meta name="author" content="Design: Brian Devine / Author: Evan Culver" />
+	<meta name="distribution" content="global" />
+	<!--<meta name="verify-v1" content="JnT0tb9tGmXVHZ0nQjw8YaIVohZWyM4upxj5FPGl3eQ=" />-->
+	<meta name="keywords" content="KEYWORDS HERE" />
+	<meta name="description" content="DESCRIPTION HERE" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}/css/master.css?v=02122009" />
+	
+	<!-- CSS Hacks for IE < 7 -->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="{{ MEDIA_URL }}/css/ie6.css" />
+	<![endif]-->
+
+	<!-- CSS Hacks for IE  7 -->
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="{{ MEDIA_URL }}/css/ie7.css" />
+	<![endif]-->
+	
+	{% block extra_head %} {% endblock %}
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div id='header-title'>
+				<a href="/" title="B3B Review"><img src="{{ MEDIA_URL }}/images/header_title.gif" alt="B3BReview" /></a>
+			</div>
+			
+			<div id="header-social-links">
+				<img src="{{ MEDIA_URL }}/images/delicious_icon.jpg" alt="B3BReview on Delicious" />
+				<img src="{{ MEDIA_URL }}/images/rss_icon.jpg" alt="B3BReview RSS Feed" />
+				<img src="{{ MEDIA_URL }}/images/twitter_icon.jpg" alt="B3BReview on Twitter" />
+			</div>
+		</div>
+		
+		<div id="nav">
+			{% show_navigation %}
+		</div>
+		
+		<div id="body">
+			{% block body %}
+			<h1>Generic Page</h1>
+			
+			<p>
+				This is the most generic page!
+			</p>
+			{% endblock %}
+		</div>
+		
+		<div id="footer">
+			{% block footer %}
+			<div id="footer-copyright" class="fleft">&copy; B3B LLC</div>
+			<div id="footer-links" class="fright">
+				{% show_footer_links %}
+			</div>
+			{% endblock %}
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<!-- JAVASCRIPT -->
+</body>

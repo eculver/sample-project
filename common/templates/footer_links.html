@@ -1,0 +1,5 @@
+
+
+{% for footer_link in footer_links %}
+	<span class="footer-link"><a href="{{ footer_link.path }}" title="{{ footer_link.title }}">{{ footer_link.title }}</a></span>
+{% endfor %}
