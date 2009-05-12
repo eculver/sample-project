@@ -1,6 +1,8 @@
+import os
 from django.conf.urls.defaults import *
 from b3breview.products.views import latest, archive
 from django.contrib import admin
+from django.conf import settings
 
 admin.autodiscover()
 
@@ -13,3 +15,10 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/(.*)', admin.site.root),
 )
+
+# For serving static media files (css, js, images)
+if settings.DEBUG:	
+	urlpatterns += patterns('',
+        (r'^media/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(settings.MEDIA_URL, 'media')}),
+    )
+
