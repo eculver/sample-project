@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1, 
+        "model": "common.navigationitem", 
+        "fields": {
+            "path": "/", 
+            "title": "Today's Product"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "common.navigationitem", 
+        "fields": {
+            "path": "/archive/", 
+            "title": "Archive"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "common.footeritem", 
+        "fields": {
+            "path": "/about/", 
+            "title": "About B3B"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "common.footeritem", 
+        "fields": {
+            "path": "/contact/", 
+            "title": "Contact"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "common.footeritem", 
+        "fields": {
+            "path": "/advertise/", 
+            "title": "Advertise"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "common.footeritem", 
+        "fields": {
+            "path": "/rss/", 
+            "title": "RSS"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "common.footeritem", 
+        "fields": {
+            "path": "/terms/", 
+            "title": "Terms"
+        }
+    }
+]
