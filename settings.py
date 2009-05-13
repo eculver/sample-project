@@ -1,6 +1,6 @@
 # Django settings for b3breview project.
 
-import os.path
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -94,10 +94,11 @@ INSTALLED_APPS = (
 
 
 if DEBUG:
-	PROJECT_PATH = "/home/eculver/dev/b3breview"
 	CONTENT_URL = "http://localhost:8000"
 else:
-	PROJECT_PATH = "/path/to/production/content"
 	CONTENT_URL = "http://content.project.com/"
+	
+
+PROJECT_PATH = os.getcwd()
 	
 	
