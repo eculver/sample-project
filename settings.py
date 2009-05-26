@@ -37,7 +37,9 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/eculver/b3breview/media/'
+# PROJECT_PATH/content
+#MEDIA_ROOT = os.path.join(os.getcwd(), 'content')
+MEDIA_ROOT = os.getcwd()
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -98,7 +100,6 @@ if DEBUG:
 else:
 	CONTENT_URL = "http://content.project.com/"
 	
-
 PROJECT_PATH = os.getcwd()
 	
 	
