@@ -1,16 +1,14 @@
 
 {% for navigation_item in navigation_items %}
-
 	{% if navigation_item.active %}
 		<div class="nav-item-active">{{ navigation_item.title }}</div>
 	{% else %}
 		<div class="nav-item"><a href="{{ navigation_item.path }}" title="{{ navigation_item.title }}">{{ navigation_item.title }}</a></div>
 	{% endif %}
-
 {% endfor %}
 			
 <div id="search-form">
-	<input type="text" name="q" value="Search..." />
+	<input type="text" name="q" value="Search..." onfocus="if($.trim(this.value)=='Search...') this.value='';" onblur="if($.trim(this.value)=='') this.value='Search...';" />
 </div>
 
 <div class="nav-arrow" id="nav-arrow-{{ active_navigation_item }}"></div>

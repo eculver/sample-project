@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.comments',
     #'django.contrib.sites',
     'b3breview.products', 
     'b3breview.common',

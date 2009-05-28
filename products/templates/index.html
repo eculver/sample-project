@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load comments %}
+
+{% block body %}
+    {% if latest_product %}
+        <h1>{{ latest_product.title }}</h1>
+        <img src="{{ latest_product.primary_image|thumbnail:"100x100" }}" alt="{{ product.name }}">
+    {% else %}
+        <h1>No Product Found</h1>
+    {% endif %}
+{% endblock %}

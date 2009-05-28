@@ -1,19 +1,29 @@
 import os
 from django.conf.urls.defaults import *
-from b3breview.products.views import latest, archive
+from b3breview.products.views import *
 from django.contrib import admin
 from django.conf import settings
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Acts as homepage
-    (r'^$', latest),
+    # homepage
+    url(r'^$', index, name="index"),
 
-	(r'^archive/$', archive),
+    # specific product
+    url(r'^(?P<slug>[a-zA-Z0-9])/?$', product, name="product"),
+    
+    # archives
+    url(r'^archive/?$', archive, name="archive"),
+    url(r'^archive/(\d{4})/?$', year_archive, name="year-archive"),
+    url(r'^archive/(\d{4})/(\d{2})/?$', month_archive, name="month-archive"),
+    url(r'^archive/(\d{4})/(\d{2})/(\d+)/?$', day_archive, name="day-archive"),
+    
+    # Comments
+    url(r'^comments/', include('django.contrib.comments.urls')),
 
-    # Uncomment the next line to enable the admin:
-    (r'^admin/(.*)', admin.site.root),
+    # Admin
+    url(r'^admin/(.*)', admin.site.root),
 )
 
 # For serving static media files (css, js, images)
